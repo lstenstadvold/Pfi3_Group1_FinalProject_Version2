@@ -112,13 +112,7 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-        if (id == R.id.help_fragment) {
-            FragmentManager fm = getFragmentManager();
-            HelpFragment hf = new HelpFragment();
-            hf.show(fm, "Help");
 
-            return false;
-        }
 
 
 
