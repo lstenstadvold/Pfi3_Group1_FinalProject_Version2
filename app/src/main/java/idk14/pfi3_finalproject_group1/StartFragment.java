@@ -6,15 +6,16 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapFragment extends Fragment {
+public class StartFragment extends Fragment implements View.OnClickListener {
 
 
-    public MapFragment() {
+    public StartFragment() {
         // Required empty public constructor
     }
 
@@ -23,8 +24,16 @@ public class MapFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_map, container, false);
+        View v = inflater.inflate(R.layout.fragment_start, container, false); //Fills the layout
+        Button button = (Button) v.findViewById(R.id.button);
+        button.setOnClickListener(this);
+
         return v;
+    }
+
+
+    public void onClick(View v) {
+
     }
 
 

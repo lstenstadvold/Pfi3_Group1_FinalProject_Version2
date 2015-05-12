@@ -1,6 +1,7 @@
 package idk14.pfi3_finalproject_group1;
 
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,6 +24,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.main_layout,new StartFragment());
+        ft.commit();
 
         Firebase.setAndroidContext(this);
 
@@ -85,6 +90,7 @@ public class MainActivity extends ActionBarActivity {
                 System.out.println("My treasure type is: " + myTreasure.getTreasureType());
 
             }
+
             @Override
             public void onCancelled(FirebaseError firebaseError) {
                 System.out.println("The read failed: " + firebaseError.getMessage());
@@ -107,15 +113,28 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        switch (id) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            case R.id.action_settings:
+                return true;
+
+                case R.id.Map:
+                    FragmentManager fm = getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.start_layout, new MapFragment());
+                    ft.addToBackStack(null);
+                    ft.commit();
+                    return false;
         }
 
-
-
-
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onBackPressed(){
+        if(getFragmentManager().getBackStackEntryCount() >0) {
+            getFragmentManager().popBackStack();
+        }else{
+            super.onBackPressed();
+        }
     }
 }

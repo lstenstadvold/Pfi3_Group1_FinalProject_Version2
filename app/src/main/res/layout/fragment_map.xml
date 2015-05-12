@@ -1,12 +1,11 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="idk14.pfi3_finalproject_group1.MapFragment">
-
-    <LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffdee5da">
+    android:background="#ffdee5da"
+    tools:context="idk14.pfi3_finalproject_group1.MapFragment"
+    android:id="@+id/map_layout">
 
 
         <ImageView
@@ -35,7 +34,6 @@
             android:layout_height="300dp"
             android:id="@+id/map"
             android:layout_gravity="center"
-            android:src="@drawable/treesuremap_kranenfloorc" />
+            android:src="@drawable/map" />
 
-    </LinearLayout>
-</FrameLayout>
+</LinearLayout>
