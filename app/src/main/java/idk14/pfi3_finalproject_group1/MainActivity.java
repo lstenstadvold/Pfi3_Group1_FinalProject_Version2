@@ -66,6 +66,16 @@ public class MainActivity extends ActionBarActivity {
                 return false;
             }
 
+            if(id==R.id.About){
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.start_layout, new HelpFragment());
+                ft.addToBackStack(null);
+                ft.commit();
+                return false;
+        }
+
+
 /*        switch (id) {
 
             case R.id.action_settings:
