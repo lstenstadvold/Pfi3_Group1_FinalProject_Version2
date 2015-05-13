@@ -1,9 +1,11 @@
 package idk14.pfi3_finalproject_group1;
 
+import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -117,7 +119,21 @@ public class MainActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+     int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        if (id == R.id.Map) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.start_layout, new MapFragment());
+            ft.addToBackStack(null);
+            ft.commit();
+
+            return false;
+/*        int id = item.getItemId();
         switch (id) {
 
             case R.id.action_settings:
@@ -129,7 +145,9 @@ public class MainActivity extends ActionBarActivity {
                     ft.replace(R.id.start_layout, new MapFragment());
                     ft.addToBackStack(null);
                     ft.commit();
-                    return false;
+                    return false;*/
+
+
         }
 
         return super.onOptionsItemSelected(item);
