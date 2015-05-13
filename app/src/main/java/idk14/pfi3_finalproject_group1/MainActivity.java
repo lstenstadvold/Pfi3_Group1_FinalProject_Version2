@@ -59,12 +59,12 @@ public class MainActivity extends ActionBarActivity {
                 return true;
 
                 case R.id.Map:
-                    FragmentManager fm = getFragmentManager();
-                    FragmentTransaction ft = fm.beginTransaction();
-                    ft.replace(R.id.start_layout, new MapFragment());
-                    ft.addToBackStack(null);
-                    ft.commit();
-                    return false;
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.start_layout, new MapFragment());
+                ft.addToBackStack(null);
+                ft.commit();
+                return false;
         }
 
         return super.onOptionsItemSelected(item);
