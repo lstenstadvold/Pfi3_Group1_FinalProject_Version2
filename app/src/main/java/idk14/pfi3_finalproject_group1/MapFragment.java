@@ -12,7 +12,7 @@ import android.widget.AdapterView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MapFragment extends Fragment{
+public class MapFragment extends Fragment {
 
 
     public MapFragment() {
@@ -25,7 +25,9 @@ public class MapFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_map, container, false);
+
         return v;
     }
 
 }
+
