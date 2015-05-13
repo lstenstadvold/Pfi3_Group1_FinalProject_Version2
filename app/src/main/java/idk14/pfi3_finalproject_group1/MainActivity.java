@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
 
     Treasure myTreasure = new Treasure("0");
 
-    //Test comment
+    //Test comment Test comment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
