@@ -30,7 +30,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
         return v;
     }
-
+//test
 
     public void onClick(View v) {
 
