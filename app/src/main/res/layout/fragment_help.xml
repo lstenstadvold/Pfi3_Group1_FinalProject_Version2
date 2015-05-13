@@ -1,10 +1,46 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
     android:layout_height="match_parent"
-    tools:context="idk14.pfi3finalproject_group1.HelpFragment">
+    android:background="#ffdee5da"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageView3"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:src= "@drawable/logo2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/HowToPlay"
+        android:textColor="#1a5b0c"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="@string/HowToPlayDesc"
+        android:textColor="#1a5b0c"
+        android:gravity="center"
+        android:id="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3" />
+</RelativeLayout>
