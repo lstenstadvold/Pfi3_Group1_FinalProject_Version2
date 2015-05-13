@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -17,7 +18,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     //Lars test
 
