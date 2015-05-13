@@ -18,6 +18,8 @@ import java.util.Map;
 
 public class MainActivity extends ActionBarActivity {
 
+    //Lars test
+
     Treasure myTreasure = new Treasure("0");
 
     @Override
