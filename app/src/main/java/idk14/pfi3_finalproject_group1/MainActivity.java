@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
                 return false;
             }
 
-            if(id==R.id.About){
+            if(id==R.id.Help){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.start_layout, new HelpFragment());
