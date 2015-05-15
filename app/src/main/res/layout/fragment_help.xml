@@ -3,9 +3,8 @@
     android:layout_width="match_parent"
     android:animateLayoutChanges="true"
     android:layout_height="match_parent"
-    android:background="#ffdee5da"
-    >
-
+    android:id="@+id/help_fragment"
+    android:tag="help_Fragment">
 
     <ImageView
         android:layout_width="300dp"
@@ -14,7 +13,6 @@
         android:scaleType="fitCenter"
         android:layout_gravity="center"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
         android:src= "@drawable/logonew"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -26,7 +24,7 @@
         android:textColor="#1a5b0c"
         android:textStyle="bold"
         android:textSize="40sp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView2" />
@@ -43,4 +41,15 @@
         android:layout_below="@+id/textView2"
         android:layout_alignEnd="@+id/imageView3"
         android:layout_alignStart="@+id/imageView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ActivCodes"
+        android:id="@+id/button2"
+        android:textColor="#000"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

@@ -15,6 +15,8 @@
     <string name="active_qr_codes">Active QR-codes</string>
     <string name="scan_qr_codes">Scan QR-code</string>
     <string name="scan_description">Scan the found QR-code to access the treasure item. \n \n Bring back the treasure item to the garden to receive your reward.</string>
+    <string name="ActivCodes">Next</string>
+    <string name="End">Let´s Play!</string>
 
 
 

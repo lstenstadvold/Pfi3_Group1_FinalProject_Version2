@@ -5,13 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -31,14 +28,12 @@ public class StartFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        container.removeAllViews();
+
         View v = inflater.inflate(R.layout.fragment_start, container, false); //Fills the layout
         Button button = (Button) v.findViewById(R.id.button);
         contentTxt = (TextView) v.findViewById(R.id.scan_content);
-
-
-
         button.setOnClickListener(this);
-
         return v;
     }
 //test
