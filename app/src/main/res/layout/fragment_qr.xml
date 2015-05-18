@@ -44,7 +44,9 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView2"
         android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3" />
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 
 
     <ImageView
@@ -64,12 +66,11 @@
         android:text="@string/ActivCodes"
         android:layout_gravity="center"
         android:id="@+id/button3"
-        android:textColor="#000"
-        android:background="#aaaaaa"
-        android:backgroundTintMode="src_in"
-        android:backgroundTint="#ff4aaa62"
-        android:layout_below="@+id/scan"
+        android:textColor="#fff"
+        android:background="#ffffc814"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+      />
 
 </LinearLayout>

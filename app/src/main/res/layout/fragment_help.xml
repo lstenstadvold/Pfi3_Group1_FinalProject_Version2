@@ -43,15 +43,22 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView2"
         android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3" />
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ActivCodes"
-        android:id="@+id/button2"
         android:layout_gravity="center"
-        android:textColor="#000"
-        android:layout_marginTop="180dp" />
+        android:id="@+id/button2"
+        android:textColor="#fff"
+        android:background="#ffffc814"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
 
 </LinearLayout>

@@ -43,7 +43,9 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView2"
         android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3" />
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -55,16 +57,19 @@
         android:layout_gravity="center"
         android:layout_below="@+id/textView"
         android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="15dp" />
-
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/End"
         android:layout_gravity="center"
         android:id="@+id/button4"
-        android:layout_below="@+id/scan"
+        android:textColor="#fff"
+        android:background="#ffffc814"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
+        />
 
 </LinearLayout>
