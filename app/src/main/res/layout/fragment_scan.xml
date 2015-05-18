@@ -14,9 +14,7 @@
         android:scaleType="fitCenter"
         android:layout_gravity="center"
         android:layout_marginRight="20dp"
-        android:src= "@drawable/logonew"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:src= "@drawable/logonew" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,10 +38,7 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:id="@+id/textView"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3" />
+        android:layout_marginTop="10dp" />
 
     <ImageView
         android:layout_width="300dp"
@@ -53,8 +48,6 @@
         android:src="@drawable/scanitem2"
         android:scaleType="fitCenter"
         android:layout_gravity="center"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
         android:layout_marginTop="15dp" />
 
     <Button
@@ -63,8 +56,6 @@
         android:text="@string/End"
         android:layout_gravity="center"
         android:id="@+id/button4"
-        android:layout_below="@+id/scan"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp" />
 
 </LinearLayout>
