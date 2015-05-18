@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,6 +26,7 @@
         android:text="@string/active_qr_codes"
         android:textColor="#1a5b0c"
         android:textStyle="bold"
+        android:layout_gravity="center"
         android:textSize="40sp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/imageView3"
@@ -63,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ActivCodes"
+        android:layout_gravity="center"
         android:id="@+id/button3"
         android:textColor="#000"
         android:background="#aaaaaa"
@@ -70,7 +72,7 @@
     android:backgroundTint="#ff4aaa62"
         android:layout_below="@+id/scan"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginTop="30dp" />
 
-</RelativeLayout>
+</LinearLayout>
 
