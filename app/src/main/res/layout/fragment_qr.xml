@@ -37,7 +37,10 @@
         android:textColor="#1a5b0c"
         android:gravity="center"
         android:id="@+id/textView"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
 
     <ImageView
         android:layout_width="300dp"
@@ -45,7 +48,8 @@
         android:id="@+id/scan"
         android:scaleType="fitCenter"
         android:src="@drawable/scanitem2"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" />
 
 
     <Button
@@ -54,10 +58,10 @@
         android:text="@string/ActivCodes"
         android:layout_gravity="center"
         android:id="@+id/button3"
-        android:textColor="#000"
-        android:background="#aaaaaa"
-        android:backgroundTintMode="src_in"
-        android:backgroundTint="#ff4aaa62"
-        android:layout_marginTop="30dp" />
+        android:textColor="#fff"
+        android:background="#ffffc814"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
