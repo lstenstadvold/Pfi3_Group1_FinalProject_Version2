@@ -50,7 +50,7 @@
         android:layout_height="120dp"
         android:layout_marginRight="20dp"
         android:id="@+id/scan"
-        android:src="@drawable/scanitem"
+        android:src="@drawable/scanitem2"
         android:scaleType="fitCenter"
         android:layout_gravity="center"
         android:layout_below="@+id/textView"
@@ -65,6 +65,6 @@
         android:id="@+id/button4"
         android:layout_below="@+id/scan"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="50dp" />
 
 </LinearLayout>
