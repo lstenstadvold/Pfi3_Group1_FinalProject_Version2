@@ -45,7 +45,7 @@
         android:layout_height="120dp"
         android:layout_marginRight="20dp"
         android:id="@+id/scan"
-        android:src="@drawable/scanitem2"
+        android:src="@drawable/scanitem"
         android:scaleType="fitCenter"
         android:layout_gravity="center"
         android:layout_marginTop="15dp" />
@@ -56,6 +56,6 @@
         android:text="@string/End"
         android:layout_gravity="center"
         android:id="@+id/button4"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>
