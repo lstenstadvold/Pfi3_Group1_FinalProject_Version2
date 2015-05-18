@@ -16,9 +16,7 @@
         android:scaleType="fitCenter"
         android:layout_gravity="center"
         android:layout_marginRight="20dp"
-        android:src= "@drawable/logonew"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:src= "@drawable/logonew" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,8 +27,6 @@
         android:layout_gravity="center"
         android:textSize="40sp"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/imageView3"
-        android:layout_centerHorizontal="true"
         android:id="@+id/textView2" />
 
     <TextView
@@ -42,9 +38,6 @@
         android:gravity="center"
         android:id="@+id/textView"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" />
 
@@ -56,8 +49,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/scanitem2"
         android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_marginTop="10dp" />
 
 
     <Button
@@ -70,7 +62,6 @@
         android:background="#ffffc814"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
-        android:layout_centerHorizontal="true"
-      />
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
