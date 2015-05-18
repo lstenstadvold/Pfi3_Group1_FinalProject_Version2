@@ -65,6 +65,9 @@
         android:text="@string/ActivCodes"
         android:id="@+id/button3"
         android:textColor="#000"
+        android:background="#aaaaaa"
+        android:backgroundTintMode="src_in"
+    android:backgroundTint="#ff4aaa62"
         android:layout_below="@+id/scan"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp" />
