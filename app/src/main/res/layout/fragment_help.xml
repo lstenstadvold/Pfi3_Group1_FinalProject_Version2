@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:animateLayoutChanges="true"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#ffdee5da"
-    >
-
+    android:id="@+id/help_fragment"
+    android:tag="help_Fragment">
 
     <ImageView
         android:layout_width="300dp"
@@ -14,7 +14,6 @@
         android:scaleType="fitCenter"
         android:layout_gravity="center"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
         android:src= "@drawable/logonew"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -25,8 +24,9 @@
         android:text="@string/HowToPlay"
         android:textColor="#1a5b0c"
         android:textStyle="bold"
+        android:layout_gravity="center"
         android:textSize="40sp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
         android:id="@+id/textView2" />
@@ -38,9 +38,20 @@
         android:text="@string/HowToPlayDesc"
         android:textColor="#1a5b0c"
         android:gravity="center"
+        android:layout_gravity="center"
         android:id="@+id/textView"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textView2"
         android:layout_alignEnd="@+id/imageView3"
         android:layout_alignStart="@+id/imageView3" />
-</RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ActivCodes"
+        android:id="@+id/button2"
+        android:layout_gravity="center"
+        android:textColor="#000"
+        android:layout_marginTop="180dp" />
+
+</LinearLayout>
