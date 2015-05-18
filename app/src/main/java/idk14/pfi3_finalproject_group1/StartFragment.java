@@ -32,7 +32,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
     public TextView contentTxt;
     static String myTreasure;
     public String scanContent;
-    public Firebase ref = new Firebase(Constants.FIREBASE_URL);
+    static Firebase ref = new Firebase(Constants.FIREBASE_URL);
 
 
     public StartFragment() {
@@ -71,10 +71,15 @@ public class StartFragment extends Fragment implements View.OnClickListener {
             scanContent = scanningResult.getContents();
             //String scanFormat = scanningResult.getFormatName();
             contentTxt.setText("CONTENT: " + scanContent);
+            System.out.println("content: " + scanContent);
 
-            checkFirebase();
+            if(scanContent.equals("TREE")){
+                System.out.println("You scanned the tree!");
+                updateLightCue();
+            }else{
+                checkFirebase();
 
-
+            }
 
         } else {
             // Toast toast = Toast.makeText(getApplicationContext(),
@@ -96,8 +101,10 @@ public class StartFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 System.out.println("Treasure value is: " + snapshot.getValue());
+
                 //stores value in the myTreasure object
                 myTreasure = snapshot.getValue().toString();
+
                 //checks that the value has been stored correctly
                 System.out.println("My treasure type is: " + myTreasure);
 
@@ -128,5 +135,12 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         treasureRef.setValue(0);
 
 
+    }
+
+    public void updateLightCue(){
+        Firebase lightCueRef = ref.child("LightCue");
+        lightCueRef.setValue(myTreasure);
+
+        myTreasure = null;
     }
 }

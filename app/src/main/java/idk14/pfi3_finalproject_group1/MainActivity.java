@@ -8,6 +8,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.firebase.client.Firebase;
+
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
 
