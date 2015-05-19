@@ -22,7 +22,8 @@ import com.firebase.client.ValueEventListener;
  */
 public class StartFragment extends Fragment implements View.OnClickListener {
 
-    public TextView contentTxt;
+    //public TextView contentTxt;
+    //public TextView emptyTxt;
     static String myTreasure;
     public String scanContent;
     static Firebase ref = new Firebase(Constants.FIREBASE_URL);
@@ -40,6 +41,8 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_start, container, false); //Fills the layout
         Button button = (Button) v.findViewById(R.id.button);
         //contentTxt = (TextView) v.findViewById(R.id.scan_content);
+        //emptyTxt = (TextView) v.findViewById(R.id.textViewEmpty);
+
 
         button.setOnClickListener(this);
 
@@ -66,7 +69,9 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
             if(scanContent.equals("TREE")){
                 System.out.println("You scanned the tree!");
-                contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
+
+
+                //contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
             }else{
                 checkFirebase();
 
@@ -111,7 +116,11 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
                     // doesn't open up the TreasureFragment if the value at treasureLocation is 0
                 } else if (myTreasure.equals("0")) {
-                   //contentTxt.setText("This spot was empty!");
+                    //emptyTxt.setVisibility(View.VISIBLE);
+                    System.out.println("The treasure spot is empty!");
+                    FragmentManager fm = getFragmentManager();
+                    EmptyFragment ef = new EmptyFragment();
+                    ef.show(fm, "Info");
                 }
 
 
