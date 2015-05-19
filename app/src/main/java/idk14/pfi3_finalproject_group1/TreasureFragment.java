@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -44,22 +43,24 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
         ImageView treasureImage = (ImageView) v.findViewById(R.id.treasureImage);
 
         if(StartFragment.myTreasure.equals("1")){
-            treasureText.setText("You found water!");
+            treasureText.setText("You Found Water");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.wateritem));
 
         }
         if(StartFragment.myTreasure.equals("2")){
-            treasureText.setText("You found air!");
+            treasureText.setText("You Found Air");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.airitem));
 
         }
         if(StartFragment.myTreasure.equals("3")){
-            treasureText.setText("You found sun!");
+            treasureText.setText("You Found Sun");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.sunitem));
 
         }
         if(StartFragment.myTreasure.equals("0")){
-            treasureText.setText("You found nothing!");
+            treasureText.setText("You Found Nothing");
+            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.sadface));
+
         }
 
 

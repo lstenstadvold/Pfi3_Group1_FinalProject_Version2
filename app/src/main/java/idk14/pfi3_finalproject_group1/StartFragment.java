@@ -1,27 +1,20 @@
 package idk14.pfi3_finalproject_group1;
 
-
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 /**
@@ -29,7 +22,8 @@ import java.util.Map;
  */
 public class StartFragment extends Fragment implements View.OnClickListener {
 
-    public TextView contentTxt;
+    //public TextView contentTxt;
+    //public TextView emptyTxt;
     static String myTreasure;
     public String scanContent;
     static Firebase ref = new Firebase(Constants.FIREBASE_URL);
@@ -47,6 +41,8 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_start, container, false); //Fills the layout
         Button button = (Button) v.findViewById(R.id.button);
         //contentTxt = (TextView) v.findViewById(R.id.scan_content);
+        //emptyTxt = (TextView) v.findViewById(R.id.textViewEmpty);
+
 
         button.setOnClickListener(this);
 
@@ -73,7 +69,9 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
             if(scanContent.equals("TREE")){
                 System.out.println("You scanned the tree!");
-                contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
+
+
+                //contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
             }else{
                 checkFirebase();
 
@@ -110,15 +108,19 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
                 //checks if myTreasure contains a value or if it is 0 (no treasure)
 
-                if((myTreasure != null) && (myTreasure.equals("0")==false)) {
+                if ((myTreasure != null) && (myTreasure.equals("0") == false)) {
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.main_layout, new TreasureFragment());
                     ft.commit();
 
-                  // doesn't open up the TreasureFragment if the value at treasureLocation is 0
-                }else if(myTreasure.equals("0")){
-                  //contentTxt.setText("This spot was empty!");
+                    // doesn't open up the TreasureFragment if the value at treasureLocation is 0
+                } else if (myTreasure.equals("0")) {
+                    //emptyTxt.setVisibility(View.VISIBLE);
+                    System.out.println("The treasure spot is empty!");
+                    FragmentManager fm = getFragmentManager();
+                    EmptyFragment ef = new EmptyFragment();
+                    ef.show(fm, "Info");
                 }
 
 
@@ -140,4 +142,5 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
 
     }
+
 }
