@@ -18,7 +18,7 @@
     <string name="ActivCodes">Next</string>
     <string name="End">Let´s Play!</string>
     <string name="empty_message">This treasure spot was empty! \nTry scanning at another treasure spot.</string>
-    <string name="treasure_description">Bring the found item to the spot. Scan the plant's QR-code to receive your reward!</string>
+    <string name="treasure_description">Bring the found item to the spot. Scan the plant´s QR-code to receive your reward!</string>
 
 
 
