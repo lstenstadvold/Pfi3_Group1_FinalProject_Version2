@@ -28,11 +28,12 @@ public class QrFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        container.removeAllViews();
+    //container.removeAllViews();
         View v = inflater.inflate(R.layout.fragment_qr, container, false);
-        Button b = (Button) v.findViewById(R.id.button3);
 
+        Button b = (Button) v.findViewById(R.id.button3);
         b.setOnClickListener(this);
+
         return v;
     }
 
