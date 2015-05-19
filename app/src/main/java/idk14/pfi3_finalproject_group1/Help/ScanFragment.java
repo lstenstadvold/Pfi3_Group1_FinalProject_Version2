@@ -46,7 +46,7 @@ public class ScanFragment extends Fragment implements View.OnClickListener {
                 StartFragment startFragment = new StartFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.scan_fragment, startFragment);
+                ft.replace(R.id.main_layout, startFragment);
                 ft.commit();
                 break;
         }
