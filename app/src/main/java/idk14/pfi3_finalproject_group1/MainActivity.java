@@ -100,6 +100,17 @@ public class MainActivity extends ActionBarActivity {
     public void onBackPressed() {
         if (getFragmentManager().getBackStackEntryCount() > 0 ){
             getFragmentManager().popBackStack();
+        } else if (getFragmentManager().getBackStackEntryCount() <1){
+            new AlertDialog.Builder(this)
+                    .setTitle("Really Exit?")
+                    .setMessage("Are you sure you want to exit?")
+                    .setNegativeButton(android.R.string.no, null)
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                        public void onClick(DialogInterface arg0, int arg1) {
+                            MainActivity.super.onBackPressed();
+                        }
+                    }).create().show();
         } else {
             super.onBackPressed();
         }
