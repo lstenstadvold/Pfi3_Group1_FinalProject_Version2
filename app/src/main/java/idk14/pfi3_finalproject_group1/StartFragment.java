@@ -48,12 +48,10 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         Button button = (Button) v.findViewById(R.id.button);
         //contentTxt = (TextView) v.findViewById(R.id.scan_content);
 
-
         button.setOnClickListener(this);
 
         return v;
     }
-//test
 
 
     @Override
@@ -82,9 +80,9 @@ public class StartFragment extends Fragment implements View.OnClickListener {
             }
 
         } else {
-            // Toast toast = Toast.makeText(getApplicationContext(),
-            //         "No scan data received!", Toast.LENGTH_SHORT);
-            // toast.show();
+/*            Toast toast = Toast.makeText(getApplicationContext(),
+                    "No scan data received!", Toast.LENGTH_SHORT);
+            toast.show();*/
         }
     }
 
