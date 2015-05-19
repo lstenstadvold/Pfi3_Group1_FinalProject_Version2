@@ -9,25 +9,25 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
-
-
 public class MainActivity extends ActionBarActivity {
 
     //Lars test
 
     Treasure myTreasure = new Treasure("0");
-
     //Test comment Test comment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
 
         Firebase.setAndroidContext(this);
 
@@ -130,4 +130,6 @@ public class MainActivity extends ActionBarActivity {
             super.onBackPressed();
         }
     }
+
+
 }
