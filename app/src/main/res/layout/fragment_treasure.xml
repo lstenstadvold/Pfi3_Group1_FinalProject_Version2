@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         android:id="@+id/treasureImage"
-        android:src="@drawable/airitems"
+        android:src="@drawable/airitem"
         android:layout_marginTop="30dp"
         android:layout_gravity="center" />
 
