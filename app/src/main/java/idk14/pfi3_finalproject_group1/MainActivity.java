@@ -75,7 +75,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    C
+    }
 
     @Override
     public void onBackPressed() {
