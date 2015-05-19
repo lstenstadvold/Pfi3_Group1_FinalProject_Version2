@@ -10,15 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
-
-import idk14.pfi3_finalproject_group1.Scanner.IntentIntegrator;
-import idk14.pfi3_finalproject_group1.Scanner.IntentResult;
 
 
 /**

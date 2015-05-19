@@ -1,4 +1,4 @@
-package idk14.pfi3_finalproject_group1.Scanner;
+package idk14.pfi3_finalproject_group1;
 
 import java.util.Arrays;
 import java.util.Collection;
