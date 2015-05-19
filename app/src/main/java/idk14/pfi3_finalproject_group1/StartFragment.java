@@ -115,7 +115,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
                     // doesn't open up the TreasureFragment if the value at treasureLocation is 0
                 } else if (myTreasure.equals("0")) {
-                    contentTxt.setText("This spot was empty!");
+                   //contentTxt.setText("This spot was empty!");
                 }
 
 
