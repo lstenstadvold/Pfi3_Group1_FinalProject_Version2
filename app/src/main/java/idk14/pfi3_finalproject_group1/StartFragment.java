@@ -46,7 +46,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_start, container, false); //Fills the layout
         Button button = (Button) v.findViewById(R.id.button);
-        contentTxt = (TextView) v.findViewById(R.id.scan_content);
+        //contentTxt = (TextView) v.findViewById(R.id.scan_content);
 
 
         button.setOnClickListener(this);
@@ -70,7 +70,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
             scanContent = scanningResult.getContents();
             //String scanFormat = scanningResult.getFormatName();
-            contentTxt.setText("CONTENT: " + scanContent);
+           // contentTxt.setText("CONTENT: " + scanContent);
             System.out.println("content: " + scanContent);
 
             if(scanContent.equals("TREE")){

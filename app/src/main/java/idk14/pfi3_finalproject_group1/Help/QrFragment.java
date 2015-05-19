@@ -47,7 +47,8 @@ public class QrFragment extends Fragment implements View.OnClickListener{
                 ScanFragment scanFragment = new ScanFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.qr_fragment, scanFragment,"tag");
+                ft.replace(R.id.main_layout, scanFragment,"tag");
+                ft.addToBackStack(null);
                 ft.commit();
                 break;
         }

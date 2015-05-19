@@ -27,7 +27,7 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-  container.removeAllViews(); // This removes the "START THE HUNT" button, only problem is that
+       //container.removeAllViews(); // This removes the "START THE HUNT" button, only problem is that
       // when you try to go back( add to backStack) you get a blank screen.
 
         // Inflate the layout for this fragment
@@ -39,17 +39,19 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
     }
 
     public void onClick(View v) {
+        int id = v.getId();
 
-      switch ((v.getId())){
-            case R.id.button2:
+            if(id==R.id.button2){
+/*      switch ((v.getId())){
+            case R.id.button2:*/
 
                 QrFragment qrFragment = new QrFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.start_layout, qrFragment);
-                ft.addToBackStack("tag");
+                ft.replace(R.id.main_layout, qrFragment,"tag");
+                ft.addToBackStack(null);
                 ft.commit();
-                break;
+               // break;
         }}
 
     }

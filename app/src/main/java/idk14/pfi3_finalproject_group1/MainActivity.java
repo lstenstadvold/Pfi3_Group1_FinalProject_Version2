@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.firebase.client.Firebase;
 
@@ -61,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
             if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.main_layout, new MapFragment());
+                ft.add(R.id.main_layout, new MapFragment());
                 ft.addToBackStack(null);
                 ft.commit();
                 return false;
@@ -94,21 +95,10 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
+    /*@Override
     public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() > 0 ){
-            getFragmentManager().popBackStack();
-        } else {
-            super.onBackPressed();
-        }
-    }
-  /*  @Override
-   /* public void onBackPressed() {
-      /*  int count = getFragmentManager().getBackStackEntryCount();
-
-        if(count >1) {
         new AlertDialog.Builder(this)
-                .setTitle("Exit?")
+                .setTitle("Really Exit?")
                 .setMessage("Are you sure you want to exit?")
                 .setNegativeButton(android.R.string.no, null)
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -117,11 +107,16 @@ public class MainActivity extends ActionBarActivity {
                         MainActivity.super.onBackPressed();
                     }
                 }).create().show();
-    }else {
-        //other stuff...
-        super.onBackPressed();
-    }
+
+
     }*/
 
-
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0 ){
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
