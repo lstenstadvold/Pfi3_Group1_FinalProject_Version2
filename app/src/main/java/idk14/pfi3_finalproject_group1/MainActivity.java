@@ -1,12 +1,15 @@
 package idk14.pfi3_finalproject_group1;
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
@@ -47,13 +50,13 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-            if(id==R.id.action_settings){
+        /*    if(id==R.id.action_settings){
                 return true;
-            }
+            }*/
             if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.start_layout, new MapFragment());
+                ft.add(R.id.start_layout, new MapFragment());
                 ft.addToBackStack(null);
                 ft.commit();
                 return false;
@@ -86,11 +89,20 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onBackPressed(){
-        if(getFragmentManager().getBackStackEntryCount() >0) {
-            getFragmentManager().popBackStack();
-        }else{
-            super.onBackPressed();
-        }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Really Exit?")
+                .setMessage("Are you sure you want to exit?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        MainActivity.super.onBackPressed();
+                    }
+                }).create().show();
+
+
     }
+
 }

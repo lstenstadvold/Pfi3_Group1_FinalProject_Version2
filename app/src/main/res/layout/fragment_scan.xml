@@ -2,74 +2,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:animateLayoutChanges="true"
     android:orientation="vertical"
+
     android:id="@+id/scan_fragment"
-    tools:context="idk14.pfi3_finalproject_group1.Help.ScanFragment">
+    tools:context="idk14.pfi3_finalproject_group1.Help.ScanFragment"
+
+    android:background="#fff"
+    >
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+
         android:id="@+id/imageView3"
         android:scaleType="fitCenter"
-        android:layout_gravity="center"
-        android:layout_marginRight="20dp"
-        android:src= "@drawable/logonew"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+
+
+        android:src= "@drawable/carnation3"
+         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/scan_qr_codes"
-        android:textColor="#1a5b0c"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+
+        android:text="@string/scan_qr_codes"
+        android:textColor="#ff7e8ab9"
+
         android:textStyle="bold"
         android:textSize="40sp"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/imageView3"
-        android:layout_centerHorizontal="true"
+
         android:id="@+id/textView2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+
         android:textSize="18sp"
         android:text="@string/scan_description"
-        android:textColor="#1a5b0c"
-        android:gravity="center"
-        android:layout_gravity="center"
+        android:textColor="#ff7e8ab9"
+
+
         android:id="@+id/textView"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/imageView3"
-        android:layout_alignStart="@+id/imageView3"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp" />
+
+ />
 
     <ImageView
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:scaleType="fitCenter"
+
         android:id="@+id/scan"
         android:src="@drawable/scanitem"
-        android:scaleType="fitCenter"
-        android:layout_gravity="center"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp" />
+
+        />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/End"
-        android:layout_gravity="center"
-        android:id="@+id/button4"
-        android:textColor="#fff"
-        android:background="#ffffc814"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+
+
+        android:text="Play!"
+        android:id="@+id/button4"
+
+        android:textColor="#fff"
+        android:background="@drawable/shape"
+        android:textSize="20sp"
+
+
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         />
 
 </LinearLayout>

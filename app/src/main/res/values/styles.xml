@@ -7,9 +7,11 @@
               <!--  <item name="colorPrimary">#ff90cd74</item>
         <item name="colorPrimaryDark">#ff67b648</item> -->
 
-        <item name="colorPrimary">#ff4c854c</item>
-        <item name="colorPrimaryDark">#1a5b0c</item>
-
+<!--        <item name="colorPrimary">#ffa2adcc</item>
+        <item name="colorPrimaryDark">#ff8792c3</item>
+-->
+        <item name="colorPrimary">#adb7e0</item>
+        <item name="colorPrimaryDark">#ff8792c3</item>
     </style>
 
 </resources>
