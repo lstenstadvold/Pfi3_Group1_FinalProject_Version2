@@ -52,6 +52,14 @@
         android:id="@+id/textView"
         />
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/TestGif"
+        />
 
     <Button
         android:layout_width="wrap_content"
