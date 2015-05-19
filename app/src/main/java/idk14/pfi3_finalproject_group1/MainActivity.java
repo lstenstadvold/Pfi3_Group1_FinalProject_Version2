@@ -17,7 +17,6 @@ import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
 public class MainActivity extends ActionBarActivity {
 
-    //Lars test
 
     Treasure myTreasure = new Treasure("0");
     //Test comment Test comment
@@ -25,8 +24,6 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
 
 
         Firebase.setAndroidContext(this);
