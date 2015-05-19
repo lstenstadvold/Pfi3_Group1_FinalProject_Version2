@@ -1,6 +1,8 @@
 package idk14.pfi3_finalproject_group1;
 
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -19,6 +22,7 @@ import com.firebase.client.Firebase;
 public class TreasureFragment extends Fragment implements View.OnClickListener {
 
     public String scanContent;
+    public TextView treasureText;
 
 
     public TreasureFragment() {
@@ -34,7 +38,7 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
 
         Button scanButton = (Button) v.findViewById(R.id.scan_button);
 
-        TextView treasureText = (TextView) v.findViewById(R.id.treasureText);
+        treasureText = (TextView) v.findViewById(R.id.treasureText);
 
         if(StartFragment.myTreasure.equals("1")){
             treasureText.setText("You found water!");
@@ -74,15 +78,22 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
             if(scanContent.equals("TREE")){
                 System.out.println("You scanned the tree!");
                 updateLightCue();
+
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.main_layout, new FinalFragment());
+                ft.commit();
+
             }else{
                 System.out.println("This is not the tree");
+                treasureText.setText("Bring your treasure back to the tree!");
 
             }
 
         } else {
-            // Toast toast = Toast.makeText(getApplicationContext(),
-            //         "No scan data received!", Toast.LENGTH_SHORT);
-            // toast.show();
+            //Toast toast = Toast.makeText(getApplicationContext(),
+              //       "No scan data received!", Toast.LENGTH_SHORT);
+            //toast.show();
         }
     }
 
@@ -90,9 +101,10 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
 
         Firebase lightCueRef = StartFragment.ref.child("LightCue");
 
-        lightCueRef.setValue(StartFragment.myTreasure);
+        lightCueRef.setValue(Integer.parseInt(StartFragment.myTreasure));
 
         System.out.println("You got a light show!");
+        treasureText.setText("You got a light show!");
 
         StartFragment.myTreasure = null;
     }

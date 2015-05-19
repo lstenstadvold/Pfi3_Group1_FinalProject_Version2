@@ -75,7 +75,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
             if(scanContent.equals("TREE")){
                 System.out.println("You scanned the tree!");
-                updateLightCue();
+                contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
             }else{
                 checkFirebase();
 
@@ -110,11 +110,17 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
                 updateFirebase();
 
-                if(myTreasure != null) {
+                //checks if myTreasure contains a value or if it is 0 (no treasure)
+
+                if((myTreasure != null) && (myTreasure.equals("0")==false)) {
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.main_layout, new TreasureFragment());
                     ft.commit();
+
+                  // doesn't open up the TreasureFragment if the value at treasureLocation is 0
+                }else if(myTreasure.equals("0")){
+                  contentTxt.setText("This spot was empty!");
                 }
 
 
@@ -135,12 +141,5 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         treasureRef.setValue(0);
 
 
-    }
-
-    public void updateLightCue(){
-        Firebase lightCueRef = ref.child("LightCue");
-        lightCueRef.setValue(myTreasure);
-
-        myTreasure = null;
     }
 }
