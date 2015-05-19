@@ -1,18 +1,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context="idk14.pfi3_finalproject_group1.TreasureFragment"
-    android:orientation="vertical">
+    >
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:hint="You found water!"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:hint="You found water"
+
+        android:textSize="30sp"
         android:id="@+id/treasureText"
         android:textColor="#ff7e8ab9" />
 
