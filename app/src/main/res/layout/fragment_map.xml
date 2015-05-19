@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:animateLayoutChanges="true"
 
-    tools:context="idk14.pfi3_finalproject_group1.Help.MapFragment"
+    tools:context="idk14.pfi3_finalproject_group1.ActionBarIcons.MapFragment"
     android:id="@+id/map_layout"
 
     android:background="#fff"

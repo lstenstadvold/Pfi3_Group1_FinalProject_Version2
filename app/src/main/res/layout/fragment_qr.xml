@@ -7,7 +7,7 @@
     android:id="@+id/qr_fragment"
 
     android:animateLayoutChanges="true"
-    tools:context="idk14.pfi3_finalproject_group1.Help.QrFragment"
+    tools:context="idk14.pfi3_finalproject_group1.ActionBarIcons.QrFragment"
 
     android:background="#fff"
 

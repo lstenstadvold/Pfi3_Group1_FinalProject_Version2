@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+
+import idk14.pfi3_finalproject_group1.Scanner.IntentIntegrator;
+import idk14.pfi3_finalproject_group1.Scanner.IntentResult;
 
 
 /**

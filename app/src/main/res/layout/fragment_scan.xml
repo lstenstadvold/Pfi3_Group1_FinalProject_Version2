@@ -7,7 +7,7 @@
     android:orientation="vertical"
 
     android:id="@+id/scan_fragment"
-    tools:context="idk14.pfi3_finalproject_group1.Help.ScanFragment"
+    tools:context="idk14.pfi3_finalproject_group1.ActionBarIcons.ScanFragment"
 
     android:background="#fff"
     >

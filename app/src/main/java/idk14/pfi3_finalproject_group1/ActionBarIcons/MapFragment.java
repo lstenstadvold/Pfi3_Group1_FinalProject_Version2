@@ -1,15 +1,11 @@
-package idk14.pfi3_finalproject_group1.Help;
+package idk14.pfi3_finalproject_group1.ActionBarIcons;
 
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import idk14.pfi3_finalproject_group1.R;
 

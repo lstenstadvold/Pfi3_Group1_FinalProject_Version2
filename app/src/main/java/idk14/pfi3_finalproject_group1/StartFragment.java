@@ -1,14 +1,11 @@
 package idk14.pfi3_finalproject_group1;
 
-
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,8 +17,8 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
-import java.util.HashMap;
-import java.util.Map;
+import idk14.pfi3_finalproject_group1.Scanner.IntentIntegrator;
+import idk14.pfi3_finalproject_group1.Scanner.IntentResult;
 
 
 /**
@@ -112,15 +109,15 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
                 //checks if myTreasure contains a value or if it is 0 (no treasure)
 
-                if((myTreasure != null) && (myTreasure.equals("0")==false)) {
+                if ((myTreasure != null) && (myTreasure.equals("0") == false)) {
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.main_layout, new TreasureFragment());
                     ft.commit();
 
-                  // doesn't open up the TreasureFragment if the value at treasureLocation is 0
-                }else if(myTreasure.equals("0")){
-                  contentTxt.setText("This spot was empty!");
+                    // doesn't open up the TreasureFragment if the value at treasureLocation is 0
+                } else if (myTreasure.equals("0")) {
+                    contentTxt.setText("This spot was empty!");
                 }
 
 
@@ -142,4 +139,5 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
 
     }
+
 }
