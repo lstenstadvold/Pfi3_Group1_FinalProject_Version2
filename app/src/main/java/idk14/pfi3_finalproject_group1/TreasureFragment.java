@@ -15,9 +15,6 @@ import android.widget.TextView;
 
 import com.firebase.client.Firebase;
 
-import idk14.pfi3_finalproject_group1.Scanner.IntentIntegrator;
-import idk14.pfi3_finalproject_group1.Scanner.IntentResult;
-
 
 /**
  * A simple {@link Fragment} subclass.
