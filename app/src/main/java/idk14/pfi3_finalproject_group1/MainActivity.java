@@ -62,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
             if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.add(R.id.start_layout, new MapFragment());
+                ft.add(R.id.main_layout, new MapFragment());
                 ft.addToBackStack(null);
                 ft.commit();
                 return false;
@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
             if(id==R.id.Help){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.start_layout, new HelpFragment());
+                ft.replace(R.id.main_layout, new HelpFragment());
                 ft.addToBackStack(null);
                 ft.commit();
                 return false;
@@ -95,7 +95,7 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
+    /*@Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setTitle("Really Exit?")
@@ -109,5 +109,14 @@ public class MainActivity extends ActionBarActivity {
                 }).create().show();
 
 
+    }*/
+
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0 ){
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
