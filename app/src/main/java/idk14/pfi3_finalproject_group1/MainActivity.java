@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.firebase.client.Firebase;
+
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
 
@@ -26,7 +28,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Firebase.setAndroidContext(this);
+
         setContentView(R.layout.activity_main);
+
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.main_layout, new StartFragment());
@@ -104,5 +110,4 @@ public class MainActivity extends ActionBarActivity {
 
 
     }
-
 }
