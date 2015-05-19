@@ -56,9 +56,6 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        /*    if(id==R.id.action_settings){
-                return true;
-            }*/
             if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
@@ -78,23 +75,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    /*@Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("Really Exit?")
-                .setMessage("Are you sure you want to exit?")
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        MainActivity.super.onBackPressed();
-                    }
-                }).create().show();
-
-
-    }*/
+    C
 
     @Override
     public void onBackPressed() {
