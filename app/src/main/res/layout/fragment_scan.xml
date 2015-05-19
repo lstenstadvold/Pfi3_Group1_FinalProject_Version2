@@ -52,7 +52,6 @@
         android:text="@string/scan_description"
         android:textColor="#ff7e8ab9"
 
-
         android:id="@+id/textView"
 
  />

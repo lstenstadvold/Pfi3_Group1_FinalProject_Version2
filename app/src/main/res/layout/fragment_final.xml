@@ -9,14 +9,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:hint="Congratulations! \nEnjoy your light show!"
         android:id="@+id/textFinal"
-        android:layout_gravity="center_horizontal" />
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#ff7e8ab9"
+        android:textSize="30dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="40dp"
+
+
         android:text="Play Again"
         android:id="@+id/buttonPlayAgain"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center"
+
+        android:textColor="#fff"
+        android:background="@drawable/shape"
+        android:textSize="20sp"
+
+
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5" />
+
 </LinearLayout>
+
