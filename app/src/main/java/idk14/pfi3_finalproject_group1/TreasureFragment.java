@@ -44,17 +44,17 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
 
         if(StartFragment.myTreasure.equals("1")){
             treasureText.setText("You Found Water");
-            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.wateritem));
+            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.final_item_water));
 
         }
         if(StartFragment.myTreasure.equals("2")){
             treasureText.setText("You Found Air");
-            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.airitem));
+            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.final_item_air));
 
         }
         if(StartFragment.myTreasure.equals("3")){
             treasureText.setText("You Found Sun");
-            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.sunitem));
+            treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.final_item_sun));
 
         }
         if(StartFragment.myTreasure.equals("0")){
