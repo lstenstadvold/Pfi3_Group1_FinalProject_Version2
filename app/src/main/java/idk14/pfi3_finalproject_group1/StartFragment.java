@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -67,8 +68,15 @@ public class StartFragment extends Fragment implements View.OnClickListener {
            // contentTxt.setText("CONTENT: " + scanContent);
             System.out.println("content: " + scanContent);
 
+            checkFirebaseConnection();
+
             if(scanContent.equals("TREE")){
                 System.out.println("You scanned the tree!");
+                FragmentManager fm = getFragmentManager();
+                WrongScanFragment wsf = new WrongScanFragment();
+                wsf.show(fm, "No item scan");
+
+
 
 
                 //contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
@@ -121,8 +129,10 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                     FragmentManager fm = getFragmentManager();
                     EmptyFragment ef = new EmptyFragment();
                     ef.show(fm, "Info");
-                }
 
+                } else if (myTreasure == null){
+                    System.out.println("Something is wrong, try again.");
+                }
 
             }
 
@@ -141,6 +151,32 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         treasureRef.setValue(0);
 
 
+    }
+
+    public void checkFirebaseConnection() {
+
+        Firebase connectedRef = new Firebase(Constants.FIREBASE_URL + "/.info/connected");
+
+        connectedRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                boolean connected = snapshot.getValue(Boolean.class);
+                if (connected) {
+                    System.out.println("connected");
+                } else {
+                    System.out.println("not connected");
+                    FragmentManager fm = getFragmentManager();
+                    NoConnectionFragment nof = new NoConnectionFragment();
+                    nof.show(fm, "No Connection");
+
+                }
+            }
+
+            @Override
+            public void onCancelled(FirebaseError error) {
+                System.err.println("Listener was cancelled");
+            }
+        });
     }
 
 }
