@@ -67,6 +67,8 @@
         android:paddingRight="20dp"
         android:paddingLeft="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+
 
         android:text="Next"
         android:id="@+id/button2"
