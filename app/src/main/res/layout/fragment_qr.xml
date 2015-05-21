@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,45 +19,46 @@
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
 
         android:id="@+id/imageView3"
         android:scaleType="fitCenter"
 
         android:src= "@drawable/carnation3"
-   />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
 
         android:text="@string/active_qr_codes"
         android:textColor="#ff7e8ab9"
         android:textStyle="bold"
-        android:textSize="40sp"
+        android:textSize="40dp"
 
 
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
         android:gravity="center"
 
 
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:text="@string/qr_description"
         android:textColor="#ff7e8ab9"
 
         android:id="@+id/textView"
 
 
-       />
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
 
     <ImageView
@@ -70,7 +71,8 @@
 
         android:id="@+id/scan"
 
-        />
+        android:layout_above="@+id/button3"
+        android:layout_alignStart="@+id/textView2" />
 
 
 
@@ -79,8 +81,9 @@
         android:layout_height="45dp"
         android:paddingRight="20dp"
         android:paddingLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="12dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
 
 
         android:text="Next"
@@ -96,6 +99,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-</LinearLayout>
+</RelativeLayout>
