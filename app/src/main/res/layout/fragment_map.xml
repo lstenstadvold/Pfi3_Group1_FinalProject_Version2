@@ -40,12 +40,12 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="340dp"
         android:layout_height="280dp"
         android:layout_gravity="center"
 
         android:id="@+id/map"
-        android:src="@drawable/map"
+        android:src="@drawable/map2"
        />
 
 </LinearLayout>
