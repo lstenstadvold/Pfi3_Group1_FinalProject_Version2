@@ -86,7 +86,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
             }
 
         } else {
-/*            Toast toast = Toast.makeText(getApplicationContext(),
+          /* Toast toast = Toast.makeText(getApplicationContext(),
                     "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();*/
         }
