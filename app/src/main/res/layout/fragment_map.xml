@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,25 +17,26 @@
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
 
         android:id="@+id/imageView3"
         android:scaleType="fitCenter"
         android:src= "@drawable/carnation3"
-     />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
 
         android:text="@string/map"
         android:textColor="#ff7e8ab9"
         android:textStyle="bold"
         android:textSize="40sp"
 
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true" />
 
 
 
@@ -46,6 +47,7 @@
 
         android:id="@+id/map"
         android:src="@drawable/map"
-       />
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
 
-</LinearLayout>
+</RelativeLayout>
