@@ -86,7 +86,7 @@
         android:layout_gravity="center"
 
 
-        android:text="Next"
+        android:text="@string/next"
         android:id="@+id/button3"
 
 

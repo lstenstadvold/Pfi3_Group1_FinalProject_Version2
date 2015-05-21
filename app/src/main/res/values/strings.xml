@@ -18,9 +18,15 @@
     <string name="ActivCodes">Next</string>
     <string name="End">Let´s Play!</string>
     <string name="empty_message">This treasure spot was empty! \nTry scanning at another treasure spot.</string>
-    <string name="treasure_description">Bring the found item to the home spot. Scan the plant´s QR-code to receive your reward!</string>
+    <string name="treasure_description">Bring the treasure back to the home flower. Scan the plant´s QR-code to receive your reward!</string>
     <string name="no_connection_message">Could not connect. \nCheck your internet settings and try again.</string>
     <string name="wrong_scan">You have no treasure! Go scan a treasure spot and bring back a treasure.</string>
+    <string name="scan">Scan</string>
+    <string name="play">Play</string>
+    <string name="next">Next</string>
+    <string name="play_again">Play again</string>
+    <string name="congratulations">Congratulations! \nEnjoy your light show.</string>
+    <string name="deliver">Deliver Item</string>
 
 
 
