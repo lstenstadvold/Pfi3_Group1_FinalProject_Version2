@@ -120,6 +120,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.main_layout, new TreasureFragment());
+                    ft.addToBackStack(null);
                     ft.commit();
 
                     // doesn't open up the TreasureFragment if the value at treasureLocation is 0

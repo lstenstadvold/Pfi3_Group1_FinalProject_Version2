@@ -92,6 +92,7 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.main_layout, new FinalFragment());
+                ft.addToBackStack(null);
                 ft.commit();
 
             }else{
