@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        android:text="@string/active_qr_codes"
+        android:text="@string/HowToPlay"
         android:textColor="#ff7e8ab9"
         android:textStyle="bold"
         android:textSize="40dp"

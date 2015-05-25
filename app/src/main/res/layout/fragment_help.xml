@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none" >
+
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
@@ -10,7 +18,9 @@
 
     android:background="#fff"
 
-    >
+        android:nestedScrollingEnabled="true"
+        android:touchscreenBlocksFocus="false"
+        android:transitionGroup="false">
 
     <ImageView
         android:layout_width="300dp"
@@ -21,12 +31,14 @@
         android:scaleType="fitCenter"
         android:src= "@drawable/logo2_final_plz"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
 
         android:text="@string/HowToPlay"
         android:textColor="#ff7e8ab9"
@@ -37,69 +49,113 @@
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+
+     <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/nr1"
+         android:layout_marginLeft="20dp"
+         android:layout_above="@+id/scan"
+         android:layout_toStartOf="@+id/textView"
+         android:id="@+id/imageView2" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nr2"
+            android:layout_alignTop="@+id/tv2"
+            android:layout_alignStart="@+id/imageView2"
+            android:id="@+id/imageView4" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nr3"
+            android:layout_alignTop="@+id/tv3"
+            android:layout_toStartOf="@+id/tv3"
+            />
+
+
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="30dp"
+        android:paddingLeft="10dp"
         android:layout_gravity="center"
-        android:gravity="center"
 
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:text="@string/HowToPlayDesc"
         android:textColor="#ff7e8ab9"
 
         android:id="@+id/textView"
-        android:layout_marginTop="53dp"
         android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_gravity="center"
-        android:gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="30dp"
 
-        android:textSize="18sp"
-        android:text="Bring it to the plant."
+        android:layout_gravity="center"
+
+        android:textSize="20sp"
+        android:text="@string/BringToPlant"
         android:textColor="#ff7e8ab9"
 
         android:id="@+id/tv2"
-        android:layout_marginTop="53dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/scan"
+        android:paddingLeft="10dp"
+        android:layout_toEndOf="@+id/imageView4" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="30dp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:paddingLeft="10dp"
 
-        android:textSize="18sp"
-        android:text="Receive your reward!"
+        android:textSize="20sp"
+        android:text="@string/Reward"
         android:textColor="#ff7e8ab9"
 
         android:id="@+id/tv3"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="40dp"
         android:layout_below="@+id/tv2"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/imageView4" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/scanitem2"
+
+        android:id="@+id/scan"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+       />
+
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/tv3"
 
 
         android:layout_gravity="center"
 
 
-        android:text="@string/next"
+        android:text="@string/play"
         android:id="@+id/button2"
 
         android:textColor="#fff"
@@ -110,8 +166,14 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:focusable="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:layout_marginBottom="40dp" />
 
 
 </RelativeLayout>
+</ScrollView>
