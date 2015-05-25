@@ -54,6 +54,40 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:textSize="18sp"
+        android:text="Bring it to the plant."
+        android:textColor="#ff7e8ab9"
+
+        android:id="@+id/tv2"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:textSize="18sp"
+        android:text="Receive your reward!"
+        android:textColor="#ff7e8ab9"
+
+        android:id="@+id/tv3"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/tv2"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="45dp"
