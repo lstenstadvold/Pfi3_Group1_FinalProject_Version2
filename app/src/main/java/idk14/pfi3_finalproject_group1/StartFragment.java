@@ -68,7 +68,6 @@ public class StartFragment extends Fragment implements View.OnClickListener {
             System.out.println("content: " + scanContent);
 
             checkFirebaseConnection();
-            Log.d("scanContent", scanningResult.getContents());
 
             if(scanContent.equals("TREE")){
                 System.out.println("You scanned the tree!");
