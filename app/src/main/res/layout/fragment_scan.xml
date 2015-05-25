@@ -81,7 +81,7 @@
         android:layout_gravity="center"
 
 
-        android:text="Play!"
+        android:text="@string/play"
         android:id="@+id/button4"
 
         android:textColor="#fff"

@@ -117,7 +117,7 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
         System.out.println("You got a light show!");
         treasureText.setText("You got a light show!");
 
-        StartFragment.myTreasure = null;
+        StartFragment.myTreasure = "0";
     }
 
 

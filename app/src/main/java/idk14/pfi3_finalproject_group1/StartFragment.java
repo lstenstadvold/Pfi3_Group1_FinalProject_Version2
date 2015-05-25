@@ -30,6 +30,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
     public String scanContent;
     static Firebase ref = new Firebase(Constants.FIREBASE_URL);
 
+
     public StartFragment() {
         // Required empty public constructor
     }
@@ -49,6 +50,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
         return v;
     }
+
 
     @Override
     public void onClick(View view) {
@@ -85,6 +87,9 @@ public class StartFragment extends Fragment implements View.OnClickListener {
             }
 
         } else {
+          /* Toast toast = Toast.makeText(getApplicationContext(),
+                    "No scan data received!", Toast.LENGTH_SHORT);
+            toast.show();*/
             Toast.makeText(getActivity(), "No scan data received!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -119,12 +124,6 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                     ft.replace(R.id.main_layout, new TreasureFragment());
                     ft.addToBackStack(null);
                     ft.commit();
-
-//                    getFragmentManager()
-//                            .beginTransaction()
-//                            .replace(R.id.main_layout, new TreasureFragment())
-//                            .addToBackStack("TREASURE_FRAGMENT")
-//                            .commit();
 
                     // doesn't open up the TreasureFragment if the value at treasureLocation is 0
                 } else if (myTreasure.equals("0")) {

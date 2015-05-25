@@ -8,12 +8,10 @@
     tools:context="idk14.pfi3_finalproject_group1.FinalFragment"
     android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Congratulations! \nEnjoy your light show"
+        android:hint="@string/congratulations"
         android:id="@+id/textFinal"
         android:layout_marginTop="80dp"
         android:layout_gravity="center"
@@ -29,7 +27,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
 
-        android:text="Play Again"
+        android:text="@string/play_again"
         android:id="@+id/buttonPlayAgain"
 
         android:textColor="#fff"
