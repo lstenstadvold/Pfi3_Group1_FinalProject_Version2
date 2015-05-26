@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -62,8 +63,6 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.sadface));
 
         }
-
-
         scanButton.setOnClickListener(this);
 
         return v;
@@ -76,6 +75,8 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
             scanIntegrator.initiateScan();
         }
     }
+
+
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
         if (scanningResult != null) {
@@ -102,9 +103,7 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
             }
 
         } else {
-            //Toast toast = Toast.makeText(getApplicationContext(),
-              //       "No scan data received!", Toast.LENGTH_SHORT);
-            //toast.show();
+            Toast.makeText(getActivity(), "No scan data received!", Toast.LENGTH_SHORT).show();
         }
     }
 

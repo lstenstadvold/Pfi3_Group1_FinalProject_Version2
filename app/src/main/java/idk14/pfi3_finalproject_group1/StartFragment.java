@@ -24,8 +24,6 @@ import com.firebase.client.ValueEventListener;
  */
 public class StartFragment extends Fragment implements View.OnClickListener {
 
-    //public TextView contentTxt;
-    //public TextView emptyTxt;
     static String myTreasure;
     public String scanContent;
     static Firebase ref = new Firebase(Constants.FIREBASE_URL);
@@ -41,11 +39,8 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_start, container, false); //Fills the layout
+
         Button button = (Button) v.findViewById(R.id.button);
-        //contentTxt = (TextView) v.findViewById(R.id.scan_content);
-        //emptyTxt = (TextView) v.findViewById(R.id.textViewEmpty);
-
-
         button.setOnClickListener(this);
 
         return v;
@@ -65,8 +60,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
         if (scanningResult != null && resultCode != 0 && intent != null) {
 
             scanContent = scanningResult.getContents();
-            //String scanFormat = scanningResult.getFormatName();
-           // contentTxt.setText("CONTENT: " + scanContent);
+
             System.out.println("content: " + scanContent);
 
             checkFirebaseConnection();
@@ -77,19 +71,12 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                 WrongScanFragment wsf = new WrongScanFragment();
                 wsf.show(fm, "No item scan");
 
-
-
-
-                //contentTxt.setText("You scanned the tree! \n Go find and scan a treasure code!");
             }else{
                 checkFirebase();
 
             }
 
         } else {
-          /* Toast toast = Toast.makeText(getApplicationContext(),
-                    "No scan data received!", Toast.LENGTH_SHORT);
-            toast.show();*/
             Toast.makeText(getActivity(), "No scan data received!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -117,7 +104,6 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                 updateFirebase();
 
                 //checks if myTreasure contains a value or if it is 0 (no treasure)
-
                 if ((myTreasure != null) && (myTreasure.equals("0") == false)) {
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();

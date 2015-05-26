@@ -9,9 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-import idk14.pfi3_finalproject_group1.R;
 import idk14.pfi3_finalproject_group1.StartFragment;
+import idk14.pfi3_finalproject_group1.R;
 
 
 /**

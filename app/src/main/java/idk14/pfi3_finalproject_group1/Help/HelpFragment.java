@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.koushikdutta.ion.Ion;
 
@@ -31,8 +30,6 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       //container.removeAllViews(); // This removes the "START THE HUNT" button, only problem is that
-      // when you try to go back( add to backStack) you get a blank screen.
 
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_help, container, false);
@@ -50,16 +47,12 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
         int id = v.getId();
 
             if(id==R.id.button2){
-/*      switch ((v.getId())){
-            case R.id.button2:*/
-
                 StartFragment startFragment = new StartFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.main_layout, startFragment,"tag");
-                ft.addToBackStack(null);
+                ft.addToBackStack("tag");
                 ft.commit();
-               // break;
         }}
 
     }
