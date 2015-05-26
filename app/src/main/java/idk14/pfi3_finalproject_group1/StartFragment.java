@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,7 +62,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanningResult != null) {
+        if (scanningResult != null && resultCode != 0 && intent != null) {
 
             scanContent = scanningResult.getContents();
             //String scanFormat = scanningResult.getFormatName();
@@ -89,6 +90,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
           /* Toast toast = Toast.makeText(getApplicationContext(),
                     "No scan data received!", Toast.LENGTH_SHORT);
             toast.show();*/
+            Toast.makeText(getActivity(), "No scan data received!", Toast.LENGTH_SHORT).show();
         }
     }
 

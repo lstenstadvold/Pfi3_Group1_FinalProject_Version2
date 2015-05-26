@@ -27,15 +27,15 @@
         android:layout_marginBottom="20dp"
 
         android:id="@+id/imageView"
-        android:src="@drawable/carnation2"
+        android:src="@drawable/logo_final_plz"
         />
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingRight="50dp"
+        android:paddingLeft="50dp"
         android:layout_gravity="center"
 
         android:text="@string/scan"

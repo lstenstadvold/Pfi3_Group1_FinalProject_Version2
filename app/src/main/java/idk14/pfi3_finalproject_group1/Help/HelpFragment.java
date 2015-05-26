@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.koushikdutta.ion.Ion;
 
 import idk14.pfi3_finalproject_group1.R;
+import idk14.pfi3_finalproject_group1.StartFragment;
 
 
 /**
@@ -52,10 +53,10 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
 /*      switch ((v.getId())){
             case R.id.button2:*/
 
-                QrFragment qrFragment = new QrFragment();
+                StartFragment startFragment = new StartFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.main_layout, qrFragment,"tag");
+                ft.replace(R.id.main_layout, startFragment,"tag");
                 ft.addToBackStack(null);
                 ft.commit();
                // break;
