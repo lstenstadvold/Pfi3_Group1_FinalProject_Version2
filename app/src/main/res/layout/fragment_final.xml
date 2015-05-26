@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
 
     tools:context="idk14.pfi3_finalproject_group1.FinalFragment"
-  >
+    android:background="#fff"
+
+    >
 
     <TextView
         android:layout_width="wrap_content"
