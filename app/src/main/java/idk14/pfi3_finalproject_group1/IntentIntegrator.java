@@ -239,7 +239,7 @@ public class IntentIntegrator {
      *   if a prompt was needed, or null otherwise.
      */
     public final AlertDialog initiateScan() {
-        return initiateScan(ALL_CODE_TYPES, -1);
+        return initiateScan(QR_CODE_TYPES, -1);
     }
 
     /**
@@ -250,7 +250,7 @@ public class IntentIntegrator {
      *   if a prompt was needed, or null otherwise.
      */
     public final AlertDialog initiateScan(int cameraId) {
-        return initiateScan(ALL_CODE_TYPES, cameraId);
+        return initiateScan(QR_CODE_TYPES, cameraId);
     }
 
     /**
