@@ -1,16 +1,22 @@
 package idk14.pfi3_finalproject_group1;
 
 import android.app.AlertDialog;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+
 import com.firebase.client.Firebase;
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
@@ -24,7 +30,6 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
 
-
         Firebase.setAndroidContext(this);
 
         setContentView(R.layout.activity_main);
@@ -34,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
 
-       // START THE HELP FRAGMENT FOR FIRST TIME USERS
+        // START THE HELP FRAGMENT FOR FIRST TIME USERS
 
         if (settings.getBoolean("my_first_time", true)) {
             //the app is being launched for first time, do something
@@ -57,9 +62,10 @@ public class MainActivity extends ActionBarActivity {
             ft.commit();
         }
 
+
     }
 
-// ACTIONSBAR MENU
+    // ACTIONSBAR MENU
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -77,16 +83,11 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.add(R.id.main_layout, new MapFragment(),"map");
-            ft.addToBackStack("map");
+            ft.replace(R.id.main_layout, new HelpFragment(),"help");
+            ft.addToBackStack("help");
             ft.commit();
             return false;
         }
-    /*    if(id==R.string.action_HowToPlay){
-
-        return false;
-        }*/
-
 /*            if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
@@ -107,6 +108,8 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
    @Override
   public void onBackPressed() {
