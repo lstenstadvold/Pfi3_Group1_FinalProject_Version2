@@ -103,7 +103,7 @@ public class StartFragment extends Fragment implements View.OnClickListener {
 
                 updateFirebase();
 
-                //checks if myTreasure contains a value or if it is 0 (no treasure)
+                //checks if myTreasure contains a value or if it is not 0 (no treasure)
                 if ((myTreasure != null) && (myTreasure.equals("0") == false)) {
                     FragmentManager fm = getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
