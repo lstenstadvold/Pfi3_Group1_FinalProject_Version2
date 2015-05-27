@@ -17,12 +17,12 @@
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
 
         android:id="@+id/imageView3"
         android:scaleType="fitCenter"
         android:src= "@drawable/logo2_final_plz"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+         />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
         android:layout_gravity="center"
 
         android:id="@+id/map"
-        android:src="@drawable/map2"
+        android:src="@drawable/map23"
        />
 
 </LinearLayout>

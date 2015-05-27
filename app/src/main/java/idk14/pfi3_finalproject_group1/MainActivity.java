@@ -11,14 +11,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.firebase.client.Firebase;
-import com.koushikdutta.ion.Ion;
-
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 import idk14.pfi3_finalproject_group1.Help.MapFragment;
+
+
 public class MainActivity extends ActionBarActivity {
 
 
@@ -35,6 +32,9 @@ public class MainActivity extends ActionBarActivity {
         final String PREFS_NAME = "MyPrefsFile";
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+
+
+       // START THE HELP FRAGMENT FOR FIRST TIME USERS
 
         if (settings.getBoolean("my_first_time", true)) {
             //the app is being launched for first time, do something
@@ -59,8 +59,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-
-
+// ACTIONSBAR MENU
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -75,35 +74,41 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-            if(id==R.id.Map){
+        if (id == R.id.action_settings) {
+            return true;
+        }
+/*            if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.add(R.id.main_layout, new MapFragment());
-                ft.addToBackStack(null);
+                ft.add(R.id.main_layout, new MapFragment(),"map");
+                ft.addToBackStack("map");
                 ft.commit();
                 return false;
-            }
-
+            }*/
+/*
             if(id==R.id.Help){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.main_layout, new HelpFragment());
-                ft.addToBackStack(null);
+                ft.replace(R.id.main_layout, new HelpFragment(),"help");
+                ft.addToBackStack("help");
                 ft.commit();
                 return false;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
+   @Override
+  public void onBackPressed() {
+
         if (getFragmentManager().getBackStackEntryCount() > 0 ){
             getFragmentManager().popBackStack();
+
+            //Click the back button twice -> AlertDialog
         } else if (getFragmentManager().getBackStackEntryCount() <1){
             new AlertDialog.Builder(this)
-                    .setTitle("Really Exit?")
-                    .setMessage("Are you sure you want to exit?")
+                    .setTitle("Exit")
+                    .setMessage("Do you want to exit?")
                     .setNegativeButton(android.R.string.no, null)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
@@ -115,6 +120,4 @@ public class MainActivity extends ActionBarActivity {
             super.onBackPressed();
         }
     }
-
-
 }
