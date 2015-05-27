@@ -15,14 +15,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="50dp"
 
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:hint="You found water"
 
         android:textSize="30sp"
         android:id="@+id/treasureText"
         android:textColor="#ff7e8ab9"
-        android:layout_above="@+id/treasureImage"
         android:layout_centerHorizontal="true" />
 
     <ImageView

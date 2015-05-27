@@ -25,6 +25,7 @@ public class EmptyFragment extends DialogFragment implements View.OnClickListene
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_empty, container, false);
+        getDialog().setTitle("Empty treasure");
 
         v.setOnClickListener(this);
 
