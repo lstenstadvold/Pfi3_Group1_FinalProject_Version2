@@ -1,30 +1,28 @@
 <resources>
     <string name="app_name">Bloom&amp;Seek</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!-- Start Screen -->
+    <string name="Play">Let´s Play!</string>
 
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="map">Map</string>
+    <!-- Help Screen -->
     <string name="HowToPlay">How To Play</string>
-    <string name="HowToPlayDesc">Search for treasure items that are hidden in QR-codes</string>
-    <string name="start_the_hunt">Start The Hunt</string>
-    <string name="content">content:</string>
-    <string name="BringToPlant">Scan the QR-codes to get treasure item </string>
-    <string name="Reward">Deliver your treasure item to the plant and receive your reward!</string>
-    <string name="qr_description">Make sure that the QR-codes that you find are activated. \n \n The big screen will show you where to find these active QR-codes.</string>
-    <string name="active_qr_codes">Active QR-codes</string>
-    <string name="scan_qr_codes">Scan QR-code</string>
-    <string name="scan_description">Scan the found QR-code to access the treasure item. \n \n Bring back the treasure item to the garden to receive your reward.</string>
-    <string name="ActivCodes">Next</string>
-    <string name="End">Let´s Play!</string>
-    <string name="empty_message">This treasure spot was empty! \nTry scanning at another treasure spot.</string>
-    <string name="treasure_description">Bring the treasure back to the home flower. Scan the plant´s QR-code to receive your reward!</string>
+
+
+    <!-- Help instructions -->
+    <string name="Step1">Search for active QR-codes that are displayed on the big screen</string>
+    <string name="Step2">Search and scan the QR-codes to get your treasure</string>
+    <string name="Step3">Deliver your treasure to the plant, Bloom , that is placed next to the big screen</string>
+    <string name="play">OK</string>
+
+
+    <!-- Empty spot Screen -->
+    <string name="empty_message">This treasure spot was empty! \n Look at the big screen to find active QR-codes.</string>
+
+
+    <string name="treasure_description"> Deliver your found treasure by scanning Bloom´s QR-code</string>
     <string name="no_connection_message">Could not connect. \nCheck your internet settings and try again.</string>
     <string name="wrong_scan">You have no treasure! Go scan a treasure spot and bring back a treasure.</string>
-    <string name="scan">Scan</string>
-    <string name="play">Play</string>
+
     <string name="action_HowToPlay">How to play</string>
     <string name="play_again">Play again</string>
     <string name="congratulations">Congratulations! \nEnjoy your light show.</string>
@@ -32,6 +30,7 @@
 
 
 
+    <string name="map">Map</string>
 
 
 </resources>

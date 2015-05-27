@@ -1,3 +1,4 @@
+/*
 package idk14.pfi3_finalproject_group1.Help;
 
 
@@ -10,9 +11,11 @@ import android.view.ViewGroup;
 import idk14.pfi3_finalproject_group1.R;
 
 
+*/
 /**
  * A simple {@link Fragment} subclass.
- */
+ *//*
+
 public class MapFragment extends Fragment {
 
 
@@ -32,3 +35,4 @@ public class MapFragment extends Fragment {
     }
 }
 
+*/

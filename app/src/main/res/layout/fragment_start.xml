@@ -31,7 +31,7 @@
         android:paddingLeft="50dp"
         android:layout_gravity="center"
 
-        android:text="@string/scan"
+        android:text="@string/Play"
         android:id="@+id/button"
 
         android:textColor="#fff"

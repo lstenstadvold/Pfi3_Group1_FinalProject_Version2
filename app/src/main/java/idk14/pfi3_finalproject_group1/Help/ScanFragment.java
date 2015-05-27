@@ -1,3 +1,4 @@
+/*
 package idk14.pfi3_finalproject_group1.Help;
 
 
@@ -13,9 +14,11 @@ import idk14.pfi3_finalproject_group1.StartFragment;
 import idk14.pfi3_finalproject_group1.R;
 
 
+*/
 /**
  * A simple {@link Fragment} subclass.
- */
+ *//*
+
 public class ScanFragment extends Fragment implements View.OnClickListener {
 
 
@@ -51,3 +54,4 @@ public class ScanFragment extends Fragment implements View.OnClickListener {
         }
     }
 }
+*/
