@@ -25,7 +25,7 @@
     <string name="wrong_scan">You have no treasure! Go scan a treasure spot and bring back a treasure.</string>
     <string name="scan">Scan</string>
     <string name="play">Play</string>
-    <string name="next">Next</string>
+    <string name="action_HowToPlay">How to play</string>
     <string name="play_again">Play again</string>
     <string name="congratulations">Congratulations! \nEnjoy your light show.</string>
     <string name="deliver">Deliver Item</string>

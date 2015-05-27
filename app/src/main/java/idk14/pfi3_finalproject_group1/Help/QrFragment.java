@@ -1,3 +1,4 @@
+/*
 package idk14.pfi3_finalproject_group1.Help;
 
 import android.app.FragmentManager;
@@ -11,9 +12,11 @@ import android.widget.Button;
 import idk14.pfi3_finalproject_group1.R;
 
 
+*/
 /**
  * A simple {@link Fragment} subclass.
- */
+ *//*
+
 public class QrFragment extends Fragment implements View.OnClickListener{
 
 
@@ -51,3 +54,4 @@ public class QrFragment extends Fragment implements View.OnClickListener{
         }
     }
 }
+*/

@@ -12,8 +12,9 @@
     android:background="#fff"
 
     >
+<!--
 
-    <!--   android:background="#ffdee5da".-->
+    &lt;!&ndash;   android:background="#ffdee5da".&ndash;&gt;
 
     <ImageView
         android:layout_width="300dp"
@@ -101,5 +102,6 @@
         android:shadowRadius="5"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+-->
 
 </RelativeLayout>

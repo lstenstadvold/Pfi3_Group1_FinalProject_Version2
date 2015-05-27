@@ -51,7 +51,7 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.main_layout, startFragment,"tag");
-                ft.addToBackStack("tag");
+              //  ft.addToBackStack("tag");
                 ft.commit();
         }}
 

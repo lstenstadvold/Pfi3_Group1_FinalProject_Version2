@@ -74,29 +74,32 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-            if(id==R.id.Map){
+        if (id == R.id.action_settings) {
+            return true;
+        }
+/*            if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.add(R.id.main_layout, new MapFragment());
-                ft.addToBackStack(null);
+                ft.add(R.id.main_layout, new MapFragment(),"map");
+                ft.addToBackStack("map");
                 ft.commit();
                 return false;
-            }
-
+            }*/
+/*
             if(id==R.id.Help){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.main_layout, new HelpFragment());
-                ft.addToBackStack(null);
+                ft.replace(R.id.main_layout, new HelpFragment(),"help");
+                ft.addToBackStack("help");
                 ft.commit();
                 return false;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
+   @Override
+  public void onBackPressed() {
 
         if (getFragmentManager().getBackStackEntryCount() > 0 ){
             getFragmentManager().popBackStack();
