@@ -75,8 +75,18 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_settings) {
-            return true;
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.add(R.id.main_layout, new MapFragment(),"map");
+            ft.addToBackStack("map");
+            ft.commit();
+            return false;
         }
+    /*    if(id==R.string.action_HowToPlay){
+
+        return false;
+        }*/
+
 /*            if(id==R.id.Map){
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
