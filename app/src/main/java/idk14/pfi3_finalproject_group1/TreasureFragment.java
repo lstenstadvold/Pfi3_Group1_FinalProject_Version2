@@ -79,7 +79,7 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
-        if (scanningResult != null) {
+        if (scanningResult != null && resultCode != 0 && intent != null) {
 
             scanContent = scanningResult.getContents();
             //String scanFormat = scanningResult.getFormatName();
