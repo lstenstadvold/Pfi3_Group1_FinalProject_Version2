@@ -86,7 +86,7 @@
             android:layout_below="@+id/tv2"
             android:layout_centerHorizontal="true"
 
-            android:src="@drawable/scan1"
+            android:src="@drawable/scan"
             />
 
 

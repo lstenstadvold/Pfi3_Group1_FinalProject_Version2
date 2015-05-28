@@ -32,7 +32,7 @@ public class FinalFragment extends Fragment implements View.OnClickListener {
         TextView finalTxt = (TextView)v.findViewById(R.id.textFinal);
         Button playAgainButton = (Button)v.findViewById(R.id.buttonPlayAgain);
 
-        finalTxt.setText("Congratulations! Enjoy your light show!");
+        finalTxt.setText("Enjoy your light show!");
 
         playAgainButton.setOnClickListener(this);
 
