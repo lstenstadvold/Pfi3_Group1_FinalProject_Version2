@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import idk14.pfi3_finalproject_group1.Help.HelpFragment;
@@ -23,6 +24,7 @@ import idk14.pfi3_finalproject_group1.Help.MapFragment;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static long back_pressed;
 
 
     @Override
@@ -83,7 +85,7 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.main_layout, new HelpFragment(),"help");
+            ft.replace(R.id.main_layout, new HelpFragment(), "help");
             ft.addToBackStack("help");
             ft.commit();
             return false;
@@ -110,15 +112,31 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
 
-   @Override
-  public void onBackPressed() {
-
-        if (getFragmentManager().getBackStackEntryCount() > 0 ){
+        if (getFragmentManager().getBackStackEntryCount() > 0 ) {
             getFragmentManager().popBackStack();
 
+
+        } else if (back_pressed + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+        } else if (getFragmentManager().getBackStackEntryCount() < 1) {
+            Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+            back_pressed = System.currentTimeMillis();
+
+
+        } else {
+            super.onBackPressed();
+        }
+    }
+}
+
+
+
+
             //Click the back button twice -> AlertDialog
-        } else if (getFragmentManager().getBackStackEntryCount() <1){
+        /*} else if (getFragmentManager().getBackStackEntryCount() <1){
             new AlertDialog.Builder(this)
                     .setTitle("Exit")
                     .setMessage("Do you want to exit?")
@@ -128,9 +146,8 @@ public class MainActivity extends ActionBarActivity {
                         public void onClick(DialogInterface arg0, int arg1) {
                             MainActivity.super.onBackPressed();
                         }
-                    }).create().show();
-        } else {
+                    }).create().show();*/
+/*        } else {
             super.onBackPressed();
-        }
-    }
-}
+        }*/
+
