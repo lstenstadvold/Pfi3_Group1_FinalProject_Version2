@@ -1,19 +1,30 @@
 package idk14.pfi3_finalproject_group1;
 
+import android.app.AlertDialog;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
+import idk14.pfi3_finalproject_group1.Help.HelpFragment;
+import idk14.pfi3_finalproject_group1.Help.MapFragment;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static long back_pressed;
 
 
     @Override
@@ -101,6 +112,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
 
    @Override
   public void onBackPressed() {
@@ -109,12 +122,25 @@ public class MainActivity extends ActionBarActivity {
             getFragmentManager().popBackStack();
 
 
-        } else if (getFragmentManager().getBackStackEntryCount() <1){
-            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        } else if (back_pressed + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+        } else if (getFragmentManager().getBackStackEntryCount() < 1) {
+            Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+            back_pressed = System.currentTimeMillis();
+
+
+        } else {
+            super.onBackPressed();
+        }
+    }
+}
 
 
 
-       /*     new AlertDialog.Builder(this)
+
+            //Click the back button twice -> AlertDialog
+        /*} else if (getFragmentManager().getBackStackEntryCount() <1){
+            new AlertDialog.Builder(this)
                     .setTitle("Exit")
                     .setMessage("Do you want to exit?")
                     .setNegativeButton(android.R.string.no, null)
@@ -123,7 +149,7 @@ public class MainActivity extends ActionBarActivity {
                         public void onClick(DialogInterface arg0, int arg1) {
                             MainActivity.super.onBackPressed();
                         }
-                    }).create().show();*/
+                    }).create().show();
         } else {
             super.onBackPressed();
         }
