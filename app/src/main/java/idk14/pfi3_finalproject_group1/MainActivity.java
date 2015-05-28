@@ -1,7 +1,5 @@
 package idk14.pfi3_finalproject_group1;
 
-import android.app.AlertDialog;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 

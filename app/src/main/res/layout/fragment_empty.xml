@@ -31,6 +31,6 @@
         android:padding="20dp"
 
         android:id="@+id/imageViewSad"
-        android:src="@drawable/treasure_empty" />
+        android:src="@drawable/empty_icon" />
 
 </LinearLayout>
