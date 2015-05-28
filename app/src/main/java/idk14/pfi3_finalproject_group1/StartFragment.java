@@ -156,10 +156,6 @@ public class StartFragment extends Fragment implements View.OnClickListener {
                     System.out.println("not connected");
                     Toast.makeText(getActivity(), "No network connection", Toast.LENGTH_SHORT).show();
 
-     /*               FragmentManager fm = getFragmentManager();
-                    NoConnectionFragment nof = new NoConnectionFragment();
-                    nof.show(fm, "No Connection");*/
-
                 }
             }
 

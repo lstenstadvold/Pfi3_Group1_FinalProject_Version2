@@ -10,13 +10,13 @@
 
     <!-- Help instructions -->
     <string name="Step1">Search for active QR-codes that are displayed on the big screen</string>
-    <string name="Step2">Search and scan the QR-codes to get your treasure</string>
+    <string name="Step2">Scan the active QR-codes to get your treasure</string>
     <string name="Step3">Deliver your treasure to the plant, Bloom , that is placed next to the big screen</string>
     <string name="play">OK</string>
 
 
     <!-- Empty spot Screen -->
-    <string name="empty_message">This treasure spot was empty! \n Look at the big screen to find active QR-codes.</string>
+    <string name="empty_message">You found empty treasure! \n Look at the big screen to find active QR-codes to scan.</string>
 
 
     <string name="treasure_description"> Deliver your found treasure by scanning Bloom´s QR-code</string>

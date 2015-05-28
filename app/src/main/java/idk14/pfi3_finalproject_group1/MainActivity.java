@@ -5,22 +5,16 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
-import idk14.pfi3_finalproject_group1.Help.HelpFragment;
-import idk14.pfi3_finalproject_group1.Help.MapFragment;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -112,8 +106,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
+
 
    @Override
   public void onBackPressed() {
@@ -125,7 +118,7 @@ public class MainActivity extends ActionBarActivity {
         } else if (back_pressed + 2000 > System.currentTimeMillis()) {
             super.onBackPressed();
         } else if (getFragmentManager().getBackStackEntryCount() < 1) {
-            Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Press again to exit!", Toast.LENGTH_SHORT).show();
             back_pressed = System.currentTimeMillis();
 
 
@@ -154,4 +147,4 @@ public class MainActivity extends ActionBarActivity {
             super.onBackPressed();
         }
     }
-}
+}*/
