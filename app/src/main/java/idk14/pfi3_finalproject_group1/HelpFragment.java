@@ -1,4 +1,4 @@
-package idk14.pfi3_finalproject_group1.Help;
+package idk14.pfi3_finalproject_group1;
 
 
 import android.app.Fragment;
@@ -9,11 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-import com.koushikdutta.ion.Ion;
-
-import idk14.pfi3_finalproject_group1.R;
-import idk14.pfi3_finalproject_group1.StartFragment;
 
 
 /**
@@ -37,9 +32,6 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
 
         b.setOnClickListener(this);
 
-       //ImageView gif = (ImageView) v.findViewById(R.id.TestGif);
-        //Ion.with(gif).load("http://38.media.tumblr.com/tumblr_mdgfpehkYN1r8cvzdo1_500.gif");
-
         return v;
     }
 
@@ -51,7 +43,6 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.main_layout, startFragment,"tag");
-              //  ft.addToBackStack("tag");
                 ft.commit();
         }}
 

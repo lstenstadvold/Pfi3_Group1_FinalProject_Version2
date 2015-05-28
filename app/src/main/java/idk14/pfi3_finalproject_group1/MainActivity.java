@@ -1,19 +1,16 @@
 package idk14.pfi3_finalproject_group1;
 
-import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
-import idk14.pfi3_finalproject_group1.Help.HelpFragment;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -111,9 +108,13 @@ public class MainActivity extends ActionBarActivity {
         if (getFragmentManager().getBackStackEntryCount() > 0 ){
             getFragmentManager().popBackStack();
 
-            //Click the back button twice -> AlertDialog
+
         } else if (getFragmentManager().getBackStackEntryCount() <1){
-            new AlertDialog.Builder(this)
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+
+
+       /*     new AlertDialog.Builder(this)
                     .setTitle("Exit")
                     .setMessage("Do you want to exit?")
                     .setNegativeButton(android.R.string.no, null)
@@ -122,7 +123,7 @@ public class MainActivity extends ActionBarActivity {
                         public void onClick(DialogInterface arg0, int arg1) {
                             MainActivity.super.onBackPressed();
                         }
-                    }).create().show();
+                    }).create().show();*/
         } else {
             super.onBackPressed();
         }
