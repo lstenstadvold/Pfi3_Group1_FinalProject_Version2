@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -17,12 +18,15 @@ import com.firebase.client.Firebase;
 
 public class MainActivity extends ActionBarActivity {
     private static long back_pressed;
+    public static MediaPlayer treasureSound;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        treasureSound = MediaPlayer.create(this, R.raw.sun);
 
         Firebase.setAndroidContext(this);
 

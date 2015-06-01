@@ -4,6 +4,7 @@ package idk14.pfi3_finalproject_group1;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,8 +22,8 @@ import com.firebase.client.Firebase;
  * A simple {@link Fragment} subclass.
  */
 public class TreasureFragment extends Fragment implements View.OnClickListener {
-
     public String scanContent;
+
     public TextView treasureText;
 
 
@@ -46,16 +47,18 @@ public class TreasureFragment extends Fragment implements View.OnClickListener {
         if(StartFragment.myTreasure.equals("1")){
             treasureText.setText("You Found Water");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.water_icon));
-
+             MainActivity.treasureSound.start();
         }
         if(StartFragment.myTreasure.equals("2")){
             treasureText.setText("You Found Air");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.wind_icon));
+            MainActivity.treasureSound.start();
 
         }
         if(StartFragment.myTreasure.equals("3")){
             treasureText.setText("You Found Sun");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.sun_icon));
+            MainActivity.treasureSound.start();
 
         }
         if(StartFragment.myTreasure.equals("0")){
