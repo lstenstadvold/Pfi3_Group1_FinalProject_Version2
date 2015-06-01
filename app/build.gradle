@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'MyReleaseKey'
+            keyPassword 'treasureHunt19'
+            storeFile file('C:/Users/Ilham/.android/myKeystore.jks')
+            storePassword 'nejnejnej11'
+        }
+    }
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
-
     defaultConfig {
         applicationId "idk14.pfi3_finalproject_group1"
         minSdkVersion 17
@@ -15,6 +22,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            signingConfig signingConfigs.config
         }
     }
     packagingOptions {
