@@ -2,8 +2,6 @@ package idk14.pfi3_finalproject_group1;
 
 
 import android.app.DialogFragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -23,10 +21,11 @@ import com.firebase.client.Firebase;
  * A simple {@link Fragment} subclass.
  */
 public class TreasureDialog extends DialogFragment implements View.OnClickListener {
-
+    public Button scanButton;
     public String treasureValue;
     public TextView treasureText;
     public String scanContent;
+    public TextView desText;
     public ImageView treasureImage;
 
     public TreasureDialog() {
@@ -42,9 +41,10 @@ public class TreasureDialog extends DialogFragment implements View.OnClickListen
 
         treasureValue = (String) getArguments().getSerializable("treasure");
 
-        Button scanButton = (Button) view.findViewById(R.id.scan_button);
+         scanButton = (Button) view.findViewById(R.id.scan_button);
 
         treasureText = (TextView) view.findViewById(R.id.treasureText);
+        desText = (TextView) view.findViewById(R.id.treasureDescription);
 
         treasureImage = (ImageView) view.findViewById(R.id.treasureImage);
 
@@ -66,6 +66,9 @@ public class TreasureDialog extends DialogFragment implements View.OnClickListen
         if(treasureValue.equals("0")){
             treasureText.setText("Nothing here!");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.treasure_empty));
+            desText.setVisibility(View.INVISIBLE);
+            scanButton.setVisibility(View.INVISIBLE);
+
 
 
         }
@@ -74,6 +77,7 @@ public class TreasureDialog extends DialogFragment implements View.OnClickListen
 
 
         getDialog().setCanceledOnTouchOutside(true);
+        getDialog().dismiss();
 
         return view;
 
@@ -81,6 +85,7 @@ public class TreasureDialog extends DialogFragment implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
+
         if (view.getId() == R.id.scan_button) {
             IntentIntegrator scanIntegrator = new IntentIntegrator(this);
             scanIntegrator.initiateScan();
@@ -120,7 +125,11 @@ public class TreasureDialog extends DialogFragment implements View.OnClickListen
 
         System.out.println("You got a light show!");
         treasureText.setText("You got a light show!");
-        treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.treasure_empty));
+        treasureImage.setVisibility(View.INVISIBLE);
+        desText.setVisibility(View.GONE);
+        scanButton.setVisibility(View.GONE);
+
+
 
         //remove the item that has been delivered from the arraylist
         UserData.inventory.remove(InventoryFragment.selectedTreasure);
