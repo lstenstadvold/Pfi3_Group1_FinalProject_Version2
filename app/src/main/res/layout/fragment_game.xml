@@ -41,7 +41,7 @@
         android:layout_alignTop="@+id/circle"
         android:layout_alignRight="@+id/circle"
         android:layout_alignBottom="@+id/circle"
-        android:hint="5"
+        android:hint="0"
         android:textSize="100dp"
         android:textColor="#ffffffff"
         android:textStyle="bold"
@@ -76,7 +76,7 @@
         android:layout_alignTop="@+id/circleWater"
         android:layout_alignRight="@+id/circleWater"
         android:layout_alignBottom="@+id/circleWater"
-        android:hint="1"
+        android:hint="0"
         android:textStyle="bold"
         android:textSize="20dp"
         android:gravity="center" />
@@ -110,7 +110,7 @@
         android:layout_alignTop="@+id/circleAir"
         android:layout_alignRight="@+id/circleAir"
         android:layout_alignBottom="@+id/circleAir"
-        android:hint="2"
+        android:hint="0"
         android:textStyle="bold"
         android:textSize="20dp"
         android:gravity="center" />
@@ -142,7 +142,7 @@
         android:layout_alignTop="@+id/circleSun"
         android:layout_alignRight="@+id/circleSun"
         android:layout_alignBottom="@+id/circleSun"
-        android:hint="2"
+        android:hint="0"
         android:textStyle="bold"
         android:textSize="20dp"
         android:gravity="center" />

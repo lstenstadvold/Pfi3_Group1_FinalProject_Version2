@@ -11,6 +11,7 @@ public class UserData {
     public static int airScore = 0;
     public static int waterScore = 0;
     public static int sunScore = 0;
+    public static int totalScore;
     public static ArrayList<String> inventory;
 
 }
