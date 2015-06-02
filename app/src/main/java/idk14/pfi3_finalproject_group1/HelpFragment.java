@@ -39,11 +39,16 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
         int id = v.getId();
 
             if(id==R.id.button2){
-                GameFragment gameFragment = new GameFragment();
+                StartFragment startFragment = new StartFragment();
                 FragmentManager fm = getFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.main_layout, gameFragment,"tag");
+                ft.replace(R.id.main_layout, startFragment,"tag");
                 ft.commit();
         }}
 
     }
+
+
+
+
+

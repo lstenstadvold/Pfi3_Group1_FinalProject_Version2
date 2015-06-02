@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
-import java.util.ArrayList;
-
 
 public class MainActivity extends ActionBarActivity {
     private static long back_pressed;
@@ -28,15 +26,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        treasureSound = MediaPlayer.create(this, R.raw.sun);
+        treasureSound = MediaPlayer.create(this, R.raw.drops);
 
         Firebase.setAndroidContext(this);
-
-        //add nine empty spots to the inventory arraylist
-        UserData.inventory = new ArrayList<String>(9);
-        for(int i = 0; i < 9; i ++) {
-            UserData.inventory.add("0");
-        }
 
         setContentView(R.layout.activity_main);
 
@@ -53,7 +45,7 @@ public class MainActivity extends ActionBarActivity {
 
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.main_layout, new WelcomeFragment());
+            ft.replace(R.id.main_layout, new HelpFragment());
             ft.addToBackStack(null);
             ft.commit();
 
@@ -64,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
 
             FragmentManager fm = getFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            ft.replace(R.id.main_layout, new GameFragment());
+            ft.replace(R.id.main_layout, new StartFragment());
             ft.commit();
         }
 
