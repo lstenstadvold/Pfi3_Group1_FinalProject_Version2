@@ -29,6 +29,16 @@
     <string name="deliver">Deliver treasure</string>
 
 
+    <string name="enterName">Enter Your Name</string>
+    <string name="start">Start</string>
+
+
+    <string name="Inventory">Inventory</string>
+    <string name="Scan">Scan</string>
+
+
+
+
 
     <string name="map">Map</string>
 
