@@ -67,7 +67,7 @@ public class TreasureDialog extends DialogFragment implements View.OnClickListen
             treasureText.setText("Nothing here!");
             treasureImage.setImageDrawable(getResources().getDrawable(R.drawable.treasure_empty));
             desText.setVisibility(View.INVISIBLE);
-            scanButton.setVisibility(View.INVISIBLE);
+            scanButton.setVisibility(View.GONE);
 
 
 
